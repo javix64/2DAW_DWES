@@ -5,10 +5,19 @@ Escribe una función que reciba una cadena y comprueba si es una matrícula vál
 
 function matriculaValida($matricula){
     $pal;
-    for ($i=1; $i < strlen($matricula); $i++) {
-        if ($i<4){}
-        $pal=substr($matricula,$i,1);
-        return $pal;
-    }
+    
+        $numbers=substr($matricula,0,4);
+        $words=substr($matricula,5,7);
+
+        if (is_numeric($numbers)){
+            echo "The first four digits are numbers."."<br>";
+        }else{
+            echo "There is a digit that is not number."."<br>";
+        }
+        if(is_string($words)){
+            echo "The three last digits are words."."<br>";
+        }else{
+            echo "There is a digit that is not a word."."<br>";
+        }
 }
-    echo matriculaValida("4512BHL");
+matriculaValida("4512BHL");
