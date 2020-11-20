@@ -17,9 +17,6 @@ en lugar del nombre del fichero.
 */
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
-    //$_SERVER["REQUEST_METHOD"]=="POST"
-    //nos sirve para controlar el tipo de request que haces
-    //en este caso es un post
     
     $user = $_POST['usuario1'];
     $pass = $_POST['password1'];
