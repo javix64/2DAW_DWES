@@ -50,10 +50,18 @@ class Compra_vehiculo{
 
     }//fin tapiceria cuero
 
+    static function descuento_gobierno(){
+        
+        self::$ayuda=4500;
+        
+    }//fin descuento_gobierno
+
     function precio_final(){
         $precio_final = $this->precio_base-self::$ayuda;
         return $precio_final;
 
     }//fin precio final
 
+
 }//fin clase
+
